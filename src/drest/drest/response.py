@@ -32,6 +32,7 @@ class ResponseHandler(meta.MetaMixin):
     status = None
     data = None
     
-    def __init__(self, status, data, **kw):
-        self.status = int(status)
+    def __init__(self, response, data, **kw):
+        self.status = int(response.status)
+	self.response = response
         self.data = data

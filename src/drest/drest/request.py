@@ -392,7 +392,7 @@ class RequestHandler(meta.MetaMixin):
             serialized_data = data
             data = self._deserialize(data)
 
-        return_response = response.ResponseHandler(int(res.status), data,
+        return_response = response.ResponseHandler(res, data,
             method=method,
             payload=payload,
             url=url,
